@@ -1,5 +1,5 @@
-from personagens import *
-from acoes import *
+from combate_por_turno.personagens import *
+from combate_por_turno.acoes import *
 from os import system 
 
 system("cls")

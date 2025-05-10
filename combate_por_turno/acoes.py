@@ -1,4 +1,4 @@
-from personagens import *
+from combate_por_turno.personagens import *
 from sys import exit
 from time import sleep
 from os import system
