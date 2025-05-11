@@ -38,6 +38,7 @@ while start:
             print(f"     Turno: {turno}")
             print("     --------")
             escolher()
+            laplace.jogar()
       elif jogador.estar_vivo():
             system('cls')
             print("     Laplace foi derrotado com sucesso!")
