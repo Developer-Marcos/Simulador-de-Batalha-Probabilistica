@@ -24,7 +24,7 @@ def status():
       print(f"""
       __________________________________________________
            
-      Sua vida:    {jogador.vida} | Vida de Laplace:    {laplace.vida}
+      Sua vida:    {jogador.vida} | Vida de Laplace:   {laplace.vida}
       Sua energia: {jogador.energia} | Energia de Laplace: {laplace.energia} 
       __________________________________________________
 

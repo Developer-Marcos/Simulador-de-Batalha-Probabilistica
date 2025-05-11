@@ -34,7 +34,7 @@ class Player(Entidade):
             self.energia += valor if self.energia + valor < 100 else 100 - self.energia
             print('     -')
             print('     O jogador meditou.')
-            print('     Recuperou sua energia.')
+            print('     Recuperou +40 de energia.')
             sleep(3)
       
       def regenerar(self):
@@ -46,6 +46,7 @@ class Player(Entidade):
                   print('     -')
                   print('     O jogador se regenerou.')
                   print('     Recuperou sua parte de sua vida.')
+                  print('     +30 de vida para o jogador.')
             else:
                   print('     O jogador não tem energia o suficiente.')
                   print('     Você não pode se curar.')
