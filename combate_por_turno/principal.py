@@ -1,5 +1,5 @@
-from combate_por_turno.personagens import *
-from combate_por_turno.acoes import *
+from personagens import *
+from acoes import *
 from os import system 
 
 system("cls")
@@ -31,15 +31,20 @@ if not start:
 
 turno = 0
 while start:
-      if laplace.vida > 0:
+      if jogador.estar_vivo() and laplace.estar_vivo():
             system("cls")
             turno += 1
             status()
             print(f"     Turno: {turno}")
             print("     --------")
             escolher()
+      elif jogador.estar_vivo():
+            system('cls')
+            print("     Laplace foi derrotado com sucesso!")
+            print("     O sistema agradece ao jogador.\n")
+            sair()
       else:
             system('cls')
-            print("     Laplave foi derrotado com sucesso!")
-            print("     O sistema agradeceu ao jogador.\n")
+            print("     O jogador foi derrotado!")
+            print("     Você foi morto por Laplace.")
             sair()

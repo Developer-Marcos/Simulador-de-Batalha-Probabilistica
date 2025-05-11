@@ -4,6 +4,9 @@ class Entidade:
       def __init__(self, vida, energia):
             self.vida = vida
             self.energia = energia
+      
+      def estar_vivo(self):
+            return self.vida > 0
           
 
 class player(Entidade):
@@ -35,10 +38,10 @@ class player(Entidade):
       
       def regenerar(self):
             valor = 30
+            custo = 30
             if self.energia >= custo:
                   self.vida += valor if self.vida + valor < 100 else 100 - self.vida
-                  custo = 30
-                  jogador.energia -= custo
+                  self.energia -= custo
                   print('     -')
                   print('     O jogador se regenerou.')
                   print('     Recuperou sua parte de sua vida.')
@@ -61,13 +64,13 @@ class player(Entidade):
             sleep(2)
 
       def bola_de_fogo(self):
-            custo = 60
+            custo = 80
             if self.energia >= custo:
                   self.energia -= custo
-                  laplace.vida -= 60
+                  laplace.vida -= 45
                   print('     -')
                   print('     Laplace foi atingido por uma bola de fogo!')
-                  print('     Laplace perdeu 60 de vida.')
+                  print('     Laplace perdeu 45 de vida.')
             else:
                   print('     O jogador não tem energia o suficiente.')
                   print('     Você está cansado.')
