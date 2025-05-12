@@ -20,4 +20,4 @@ Também existe uma mecânica de falas de Laplace, onde existe chances dele inter
 
 ###### Execute o arquivo "principal.py" no terminal para iniciar a experiência.
 
-![Desafiando Laplace](DesafiandoLaplace.gif)
+![Desafiando Laplace](DesafiandoLaplace-gif.gif)
