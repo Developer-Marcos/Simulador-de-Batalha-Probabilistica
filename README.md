@@ -1,1 +1,1 @@
-# jogo-de-turno-com-IA
+# Simulador de Batalha Probabilística
