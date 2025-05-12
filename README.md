@@ -1,5 +1,5 @@
-# Simulador de Batalha Probabilística
-Jogo interativo em que o jogador enfrenta um inimigo regido por probabilidades e decisões estratégicas.<br>
+# Desafiando Laplace
+"Desafiando Laplace" é um jogo interativo em que o jogador enfrenta um inimigo regido por probabilidades e decisões estratégicas.<br>
 Cada ação consome energia e afeta a vida das entidades envolvidas no combate, tornando cada rodada única e imprevisível.
 
 ###### Como funciona?
