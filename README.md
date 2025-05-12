@@ -19,3 +19,5 @@ Ele não ataca por impulso, cada ação é calculada.
 Também existe uma mecânica de falas de Laplace, onde existe chances dele interagir com o jogador.
 
 ###### Execute o arquivo "principal.py" no terminal para iniciar a experiência.
+
+![Desafiando Laplace](DesafiandoLaplace.gif)
