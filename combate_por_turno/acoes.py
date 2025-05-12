@@ -2,6 +2,7 @@ from personagens import *
 from sys import exit
 from time import sleep
 from os import system
+from random import random
 
 def sair():
       print("     Obrigado por jogar.\n")
@@ -58,9 +59,17 @@ def habilidades_do_jogador():
             print('            Não é possível se curar além disso!')
             habilidades_do_jogador()
       elif opc == '3':
-            jogador.raio_de_gelo()
+            prob = random()
+            if prob >= 0.4:
+                  jogador.raio_de_gelo()
+            else:
+                  print('     O Raio de Gelo falhou ao ser conjurado!')
       elif opc == '4':
-            jogador.bola_de_fogo()
+            prob = random()
+            if prob >= 0.5:
+                  jogador.bola_de_fogo()
+            else:
+                  print('     A Bola de Fogo se dissipou antes de atingir o alvo!')
       else:
             print('            Essa opção é inválida.')
             print('            Não desperdice os seus turnos!')
@@ -83,7 +92,12 @@ def desistir():
 def escolher():
       opc = input('     Sua opção [1], [2] ou [3]: ')
       if opc == '1':
-            jogador.atacar()
+            prob = random()
+            if prob >= 0.3:
+                  jogador.atacar()
+            else:
+                  print('O jogador errou o ataque!')
+                  sleep(2)
             
       elif opc == '2':
             habilidades_do_jogador()

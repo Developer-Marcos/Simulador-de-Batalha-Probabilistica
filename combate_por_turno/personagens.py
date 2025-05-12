@@ -1,5 +1,5 @@
 from time import sleep
-from random import choices
+from random import choices, random, choice
 
 class Entidade:
       def __init__(self, vida, energia):
@@ -26,7 +26,7 @@ class Player(Entidade):
             else:
                   print('     O jogador não tem energia o suficiente.')
                   print('     Você está cansado.')
-            sleep(2)
+            sleep(3)
       
 
       def meditar(self):
@@ -63,7 +63,7 @@ class Player(Entidade):
             else:
                   print('     O jogador não tem energia o suficiente.')
                   print('     Você está cansado.')
-            sleep(2)
+            sleep(3)
 
       def bola_de_fogo(self):
             custo = 80
@@ -76,7 +76,7 @@ class Player(Entidade):
             else:
                   print('     O jogador não tem energia o suficiente.')
                   print('     Você está cansado.')
-            sleep(2)
+            sleep(3)
       
       
 
@@ -135,11 +135,32 @@ class Enemy(Entidade):
             escolha = choices(acoes, weights=probabilidades)[0]
 
             if escolha == 'atacar':
-                  self.atacar()
+                  prob = random()
+                  if prob >= 0.25:
+                        self.atacar()
+                  else:
+                        print('     -')
+                        print('     Laplace errou o ataque!')
+                        print('     -')
+                        sleep(3)
             elif escolha == 'raio_maligno':
-                  self.raio_maligno()
+                  prob = random()
+                  if prob >= 0.35:
+                        self.raio_maligno()
+                  else:
+                        print('     -')
+                        print('     Laplace tentou conjurar o Raio Maligno, mas falhou!')
+                        print('     -')
+                        sleep(3)
             elif escolha == 'ataque_caótico':
-                  self.ataque_caotico()
+                  prob = random()
+                  if prob >= 0.6:
+                        self.ataque_caotico()
+                  else:
+                        print('     -')
+                        print('     O Ataque Caótico de Laplace colapsou antes de atingir!')
+                        print('     -')
+                        sleep(3)
             elif escolha == 'regenerar':
                   self.regenerar()
             elif escolha == 'recarga':
@@ -157,7 +178,7 @@ class Enemy(Entidade):
             else:
                   print('     Laplace não tem energia o suficiente.')
                   print('     Ele precisa descansar.')
-            sleep(2)
+            sleep(3)
 
       def regenerar(self):
             valor = 30
@@ -192,7 +213,7 @@ class Enemy(Entidade):
             else:
                   print('     Laplace não tem energia o suficiente.')
                   print('     Ele precisa descansar.')
-            sleep(2)
+            sleep(3)
       
       def ataque_caotico(self):
             custo = 80
@@ -206,6 +227,40 @@ class Enemy(Entidade):
                   print('     O Laplace não tem energia o suficiente.')
                   print('     Ele precisa descansar.')
             sleep(2)
+      
+      def falar(self):
+            frases = [
+                  "Você não vai sair vivo daqui.",
+                  "Está cansado? Ainda nem comecei.",
+                  "Seu fim é inevitável.",
+                  "Você é só um erro no sistema.",
+                  "Interessante... você ainda tenta lutar.",
+                  "O caos é a única constante.",
+                  "Não lute contra o inevitável.",
+                  "Cada movimento seu é previsível.",
+                  "Eu calculei sua morte antes de você pensar em me enfrentar.",
+                  "Seus esforços são... estatisticamente irrelevantes.",
+                  "A entropia sempre vence no final.",
+                  "Dor é apenas um dado irrelevante.",
+                  "Por que você insiste em resistir?",
+                  "Você não entende as forças com que está lidando.",
+                  "A ordem não pertence a este mundo.",
+                  "Observe enquanto tudo se desfaz.",
+                  "Laplace vê tudo. Laplace prevê tudo.",
+                  "Isso não é um jogo. É o colapso do seu destino.",
+                  "Se eu fosse humano, talvez sentisse pena.",
+                  "Você já perdeu. Só não percebeu ainda.",
+                  "A simulação chega ao fim.",
+                  "O vazio é mais misericordioso que eu.",
+                  "Você é o ruído. Eu sou o cálculo.",
+                  "Continue. Quanto mais você luta, mais fraco se torna.",
+                  "Isso é apenas uma repetição de sua derrota."
+            ]
+
+            fala_escolhida = choice(frases)
+
+            print(f'Laplace diz: {fala_escolhida} ')
+
 
 jogador = Player()
 laplace = Enemy()

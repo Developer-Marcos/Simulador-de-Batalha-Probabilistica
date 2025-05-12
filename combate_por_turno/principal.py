@@ -1,6 +1,7 @@
 from personagens import *
 from acoes import *
 from os import system 
+from random import random
 
 system("cls")
 
@@ -33,6 +34,11 @@ turno = 0
 while start:
       if jogador.estar_vivo() and laplace.estar_vivo():
             system("cls")
+            prob = random()
+            if prob >= 0.65:
+                  laplace.falar()
+                  sleep(3)
+                  system("cls")
             turno += 1
             status()
             print(f"     Turno: {turno}")
